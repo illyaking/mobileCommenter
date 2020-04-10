@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<!--
+File Name: index.html
+Date: 12/19/18
+Programmer: Illya King
+Beta Testers: Allen Harmon, Andre Reyes, Amanda Steel, Josepht Heasley, Justin Byers, Maksim Pozhidayev, and Samantha Booth.
+-->
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Mobile Commentor</title>
+        <link rel="stylesheet" href="styles/commentor.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <script src="scripts/commentor.js"></script>        
+    </head>
+    <body>
+        <table>
+            <tr>
+                <td>
+                    <input type="text" id="commodity" size="110" value="" />
+                    <input type="submit" id="commodityButton" value="Start" style="width:81px" />
+                </td>
+            </tr>
+            <tr>
+                <td> 
+                    <input type="button" value="1" id="textOne" style="width:60px"/>
+                    <input type="button" value="2" id="textTwo" style="width:60px"/>
+                    <input type="button" value="3" id="textThree" style="width:60px"/>
+                    <input type="button" value="4" id="textFour" style="width:60px"/>
+                    <input type="button" value="5" id="textFive" style="width:60px"/>
+                    <input type="button" value="6" id="textSix" style="width:60px"/>
+                    <input type="button" value="7" id="textSeven" style="width:60px"/>
+                    <input type="button" value="8" id="textEight" style="width:60px"/> 
+                    <input type="button" value="9" id="textNine" style="width:60px"/> 
+                    <input type="button" value="0" id="textZero" style="width:60px"/> 
+                    <input type="button" value="Comma" id="comma" style="width:110px"/>
+                    <input type="button" value="Period" id="period" style="width:108px"/>
+                    <input type="button" value="Return" id="return" style="width:108px"/>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="button" value="AND" id="andText"  style="width:95px"/>  
+                    <input type="button" value="IN" id="inText" style="width:82px"/>
+                    <input type="button" value="ON" id="onText"  style="width:82px"/>
+                    <input type="button" value="TO" id="toText" style="width:82px"/>
+                    <input type="button" value="KD" id="kdText" style="width:82px"/>
+                    <input type="button" value="KD Flat" id="kdFlat" style="width:135px"/>
+                    <input type="button" value="SU" id="suText" style="width:82px"/>
+                    <input type="button" value="Nested" id="nested" style="width:135px"/>
+                    <input type="button" value="Not Nested" id="notNested" style="width:175px"/>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="button" value="Bags" id="bags" style="width:70px"/>
+                    <input type="button" value="Bottles" id="bottles" style="width:89px"/>
+                    <input type="button" value="Boxed" id="boxSingle" style="width:87px"/>
+                    <input type="button" value="Boxes" id="boxPlural" style="width:86px"/>
+                    <input type="button" value="Bundle" id="bundleSingle" style="width:88px"/>
+                    <input type="button" value="Bundles" id="bundlePlural" style="width:92px"/>
+                    <input type="button" value="MPB" id="machinePressed" style="width:65px"/>
+                    <input type="button" value="Drums" id="drums" style="width:77px"/>
+                    <input type="button" value="Pails" id="pails" style="width:68px"/>
+                    <input type="button" value="Rolls" id="rolls" style="width:68px"/>
+                    <input type="button" value="Tank" id="tankSingle" style="width:67px"/>
+                    <input type="button" value="Tanks" id="tankPlural" style="width:75px"/>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="button" value="Totes" id="totes" style="width:66px"/>
+                    <input type="button" value="Tube" id="tubeSingle" style="width:65px"/>
+                    <input type="button" value="Tubes" id="tubePlural" style="width:75px; margin-right: 50px;"/>
+                    <input type="button" value="Metal" id="metal" style="width:79px"/>
+                    <input type="button" value="Plastic" id="plastic" style="width:85px"/>
+                    <input type="button" value="Shipping" id="shipping" style="width:90px"/>
+                    <input type="button" value="Steel" id="steel" style="width:69px"/>
+                    <input type="button" value="Wooden" id="wooden" style="width:94px"/>
+                    <input type="button" value="Banded" id="banded" style="width:94px; margin-left: 73px;"/>
+                    <input type="button" value="Wrapped" id="wrapped" style="width:106px;"/>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="button" value="Crated" id="crateSingle" style="width:95px"/>
+                    <input type="button" value="Crates" id="cratePlural" style="width:95px"/>
+                    <input type="button" value="Frame" id="frameSingle" style="width:95px"/>
+                    <input type="button" value="Frames" id="framePlural" style="width:100px"/>
+                    <input type="button" value="Loose" id="loose" style="width:89px"/>
+                    <input type="button" value="Pallet" id="palletSingle" style="width:94px"/>
+                    <input type="button" value="Pallets" id="palletPlural" style="width:100px"/>
+                    <input type="button" value="Skid" id="skidSingle" style="width:78px"/>
+                    <input type="button" value="Skids" id="skidPlural" style="width:86px" />
+                    <input type="button" value="BK Totes" id="bulkTotes" style="width:112px"/>
+                </td>
+            </tr>
+            <tr>
+                <th><h2>Class Inspections</h2></th>
+            </tr>
+            <tr>
+                <td>
+                    <input type="button" value="Right NMFC Class Change" id="rightNMFCClassChange" style="width:230px; font-size: 15px; "/>
+                    <input type="button" value="Wrong NMFC Direct" id="wrongNMFCCorrectNMFC" style="width:175px; font-size: 15px;"/>
+                    <input type="button" value="Wrong NMFC Indirect" id="wrongNMFCIndirectProof" style="width:194px; font-size: 15px;"/>
+                    <input type="button" value="Correct Description" id="correctNMFCCorrectClass" style="width:174px; font-size: 15px;"/>
+                    <input type="button" value="Right Cl Wrong Descp" id="correctClassIncorrectDescription" style="width:199px; font-size: 15px;"/>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="button" value="Class No NMFC Direct" id="classNoNMFC" class="num-sm" style="width:240px;"/>
+                    <input type="button" value="CL No NMFC Indirect" id="classNoNMFCIndirectProof" class="num-sm" style="width:240px;"/>
+                    <input type="button" value="No CL No NMFC Direct" id="noClassNoNMFCProof" class="num-sm" style="width:240px;"/>
+                    <input type="button" value="No CL No NMFC Indirect" id="noClassNoNMFCIndirect" class="num-sm" style="width:258px;"/>
+                </td>
+            </tr>
+            <tr>
+            <th><h2>Item Rules</h2></th>
+            </tr>
+            <tr>
+                <td>
+                    <input type="button" value="360" id="item360" style="width:65px"/>
+                    <input type="button" value="420" id="item420" style="width:65px"/>
+                    <input type="button" value="422" id="item422" style="width:65px"/>
+                    <input type="button" value="424" id="item424" style="width:65px"/>
+                    <input type="button" value="425" id="item425" style="width:65px"/>
+                    <input type="button" value="640" id="item640" style="width:65px"/>
+                    <input type="button" value="750-8" id="item750Eight"  style="width:80px"/>
+                    <input type="button" value="680 Skid" id="item680Pallet" style="width:93px"/>
+                    <input type="button" value="680 Container" id="item680Container" style="width:140px"/>
+                    <input type="button" value="NOBI" id="nobi" style="width:75px"/>
+                    <input type="button" value="ICBI" id="icbi" style="width:75px"/>
+                    <input type="button" value="CDMI" id="cdmi" style="width:75px"/>
+                </td>
+            </tr>
+            <tr>
+            <th><h2>Load Characteristics</h2></th>
+            </tr>
+            <tr>   
+                <td>
+                    <input type="button" value="Can Stack and Load" id="canStackCanLoad" style="width:190px; font-size: 15px;"/>
+                    <input type="button" value="Can Stack but not load" id="canStackNoLoad" style="width:210px; font-size: 15px;"/>
+                    <input type="button" value="Cannot Stack but can Load" id="cannotStackButCanLoad" style="width:240px; font-size: 15px;"/>
+                    <input type="button" value="Cannot Stack nor Load" id="cannotStackNorLoad" style="width:210px; font-size: 15px;"/>
+                    <input type="button" value="Too Tall" id="tooTall" style="width:120px; font-size: 15px;"/>
+                </td>
+            </tr>
+            <tr>
+            <th><h2>Miscellaneous</h2></th>
+            </tr>
+            <tr>
+                <td>
+                    <input type="button" value="Over Length" id="overLength" style="width:145px"/>
+                    <input type="button" value="Extreme Length" id="extremeLength" style="width:180px"/>
+                    <input type="button" value="CCD" id="cubicCapacityAndDensity" style="width:90px"/>
+                    <input type="button" value="CAPLD" id="capacityLoad" style="width:105px"/>
+                    <input type="button" value="CAP15k" id="capacityLoad20k" style="width:120px"/>
+                    <input type="button" value="1 More" id="oneMore" style="width:100px"/>
+                    <input type="button" value="No More" id="noMore" style="width:120px"/>
+                    <input type="button" value="HTTP" id="addHTTP" style="width:90px;"/>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                        <textarea name="description" id="description" rows="5"></textarea>
+                </td>
+            </tr>
+            <tr>
+                <td class="centerBoi">
+                    <input type="button" value="Copy Description" id="copyText" style="background:#ff6600; color:#000; font-weight: bold; width:230px"/>
+                    <input type="button" value="Delete" id="delete" class="delete" style="width:150px; margin-left:50px;"/>
+                    <input type="button" value="Clear Comment" id="clearComments" style="width:220px; margin-left:50px;"/>
+                    <input type="button" value="Clear All" id="clear" style="width:200px; margin-left:50px;"/></td>
+            </tr>
+        </table>
+    </body>
+</html>
+
+
