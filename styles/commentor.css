@@ -1,0 +1,76 @@
+/* reset browser styles */
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp,small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+}
+
+body {
+    margin: 0 auto;
+}
+
+h1, h2 {
+    text-align: center;
+}
+
+table {
+    background-color: #cccccc;
+    border: 5px groove;
+    border-spacing: 0;
+    border-collapse: collapse;
+    margin: 0 auto;
+    width: 1000px;
+}
+
+th {
+    background-color: #ff6600;
+    border-bottom: 2px groove;
+    border-top: 2px groove;
+    height: 1.25em;
+}
+
+td {
+    padding: 4px 4px;
+}
+
+input[type="button"], input[type="submit"] {
+    background:#4d148c;
+    color:#fff;
+    font-size:18px;
+    cursor:pointer;
+    outline:none;
+    border-bottom:3px solid #333;
+    height:46px;
+    margin-left:2px;
+}
+
+input[type="text"] {
+    font-size: 1.2em;
+    background-color: rgba(255,255,255,.5);
+    width: 896px; 
+    margin-left: 3px;
+    padding: 5px;
+}
+
+input[type="text"]:focus, textarea:focus {
+    background-color: white;
+    color: black;
+}
+
+textarea {
+    width: 998px;
+}
+
+.header h2{
+    font-size: 1.00em;
+}
+
+.centerBoi {
+    padding-bottom: 10px;
+    text-align: center;
+}
+
