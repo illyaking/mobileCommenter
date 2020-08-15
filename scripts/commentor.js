@@ -249,13 +249,13 @@ $(document).ready(function () {
         $('#description').val(($('#description').val() + special[0] + packaging[29]));
     });
     
-    var reasons = [ "This freight was originally tendered using class ~~ADD CLASS~~ from NMFC ~~ADD NMFC~~, which was intended for ~~ADD DESCRIPTION~~ with a density measuring over ~~ADD PCF~~ PCF but less than ~~ADD PCF~~ PCF. The class was changed due to the actual density of the freight being ~~ADD PCF~~ PCF.",
-                    "This freight was originally tendered using class ~~ADD CLASS~~ from NMFC ~~ADD NMFC~~, which was intended for ~~ADD DESCRIPTION~~ with a density measuring over ~~ADD PCF~~ PCF but less than ~~ADD PCF~~ PCF. Visual inspection revealed tendered description to be incorrect. The NMFC was assigned due to visual inspection and the class was changed due to the actual density of the freight being ~~ADD PCF~~ PCF.",
-                    "This freight was originally tendered using class ~~ADD CLASS~~ from NMFC ~~ADD NMFC~~, which was intended for ~~ADD DESCRIPTION~~ with a density measuring over ~~ADD PCF~~ PCF but less than ~~ADD PCF~~ PCF. description on packing list revealed tendered description to be incorrect. The NMFC was assigned due to description on packing list and the class was changed due to the actual density of the freight being ~~ADD PCF~~ PCF. An indirect photo was taken to protect the integrity of the packaging.",
-                    "Originally tendered using class ~~ADD CLASS~~ but with no NMFC. The NMFC was assigned due to visual inspection and the class was assigned due to the actual density of ~~ADD PCF~~ PCF.",
-                    "Freight was not rated nor classed. The NMFC was assigned due to visual inspection and the class was assigned due to the actual density of ~~ADD PCF~~ PCF.",
-                    "No NMFC or class was used to tender this shipment. The NMFC was assigned due to description on packing list and class was assigned due to the actual density of ~~ADD PCF~~ PCF. An indirect photo was taken to protect the integrity of the packaging.",
-                    "Originally tendered using class ~~ADD CLASS~~ but with no NMFC. The NMFC was assigned due to description on packing list and the class was assigned due to the actual density of ~~ADD PCF~~ PCF. An indirect photo was taken to protect the integrity of the packaging.",
+    var reasons = [ "This freight was originally billed with NMFC ~~ADD NMFC~~ at class ~~ADD CLASS~~. It was described as ~~ADD DESCRIPTION~~ with a density measuring over ~~ADD PCF~~ PCF but less than ~~ADD PCF~~ PCF. The class was changed due to the actual density of the freight being ~~ADD PCF~~ PCF.",
+                    "This freight was originally billed with NMFC ~~ADD NMFC~~ at class ~~ADD CLASS~~. It was described as ~~ADD DESCRIPTION~~ with a density measuring over ~~ADD PCF~~ PCF but less than ~~ADD PCF~~ PCF.  Visual inspection revealed the description to be incorrect. The NMFC was assigned due to a visual inspection and the class was changed due to the actual density of the freight being ~~ADD PCF~~ PCF.",
+                    "This freight was originally billed with NMFC ~~ADD NMFC~~ at class ~~ADD CLASS~~. It was described as ~~ADD DESCRIPTION~~ with a density measuring over ~~ADD PCF~~ PCF but less than ~~ADD PCF~~ PCF.  The description on the packing list revealed the billed description to be incorrect. The NMFC was assigned due to the description on the packing list. The class was changed due to the actual density of the freight being ~~ADD PCF~~ PCF. An indirect photo was taken to protect the integrity of the packaging.",
+                    "Originally billed using class ~~ADD CLASS~~ but with no NMFC. The NMFC was assigned due to a visual inspection and the class was assigned due to the actual density of ~~ADD PCF~~ PCF.",
+                    "Freight was not rated nor classed on the BOL. The NMFC was assigned due to a visual inspection of the freight. The class was assigned due to the actual density of ~~ADD PCF~~ PCF.",
+                    "No NMFC or class was used to bill this shipment. The NMFC was assigned due to the description on the packing list. The class was assigned due to the actual density of ~~ADD PCF~~ PCF. An indirect photo was taken to protect the integrity of the packaging.",
+                    "Originally billed using class ~~ADD CLASS~~ but with no NMFC. The NMFC was assigned due to the description on the packing list. The class was assigned due to the actual density of ~~ADD PCF~~ PCF. An indirect photo was taken to protect the integrity of the packaging.",
                     "this freight was correctly rated but incorrectly described.",
                     "this freight was correctly rated and described."];
     
@@ -295,15 +295,15 @@ $(document).ready(function () {
         $('#description').val(($('#description').val() + special[0] + reasons[8]));
     });
     
-    var itemRules = [   "PER NMFC ITEM 360 sec. 3, this freight was opened to verify contents.",
-                        "No value was declared on BOL. Per ITEM 420 Sec 5. Line A.1, The class containing the maximum liability not exceeding $5.00 per pound was applied.",
+    var itemRules = [   "PER NMFC ITEM 250100 sec. 3(a), this freight was opened to verify contents.",
+                        "No value was declared on BOL. Per FXF ITEM 420 Sec 5. Line A.1, The class containing the maximum liability not exceeding $5.00 per pound was applied.",
                         "Per NMFC ITEM 422, Shipment reclassified to highest article in combination.",
                         "Per NMFC ITEM 424 (Referring to Classification of Parts or Pieces of a Complete Article), The classification was applied for the complete article.",
-                        "Per ITEM 425 (Referring to recondition articles), this freight has been reconditioned and is considered new and not used.",
-                        "Commodity occupies ~~ADD LENGTH~~ inches by ~~ADD WIDTH~~ inches by ~~ADD HEIGHT~~ inches, which is ~~ADD PERCENTAGE~~% of a lift truck skids, pallets or platforms with a surface area of ~~ADD LENGTH~~ inches and ~~ADD WIDTH~~ inches or ~~ADD SQUARE INCHES~~ square inches of space. Shipment also meets the stability requirement of NMFC item 680 note c. ITEM 680 applies.",
+                        "Per NMFC ITEM 425 (Referring to recondition articles), this freight has been reconditioned and is considered new and not used.",
+                        "Commodity occupies ~~ADD LENGTH~~ inches by ~~ADD WIDTH~~ inches by ~~ADD HEIGHT~~ inches, which is ~~ADD PERCENTAGE~~% of a lift truck skids, pallets or platforms with a surface area of ~~ADD LENGTH~~ inches and ~~ADD WIDTH~~ inches or ~~ADD SQUARE INCHES~~ square inches of space. Shipment also meets the stability requirement of NMFC item 680 note c. FXF ITEM 680 applies.",
                         "Commodity is ~~ADD LENGTH~~ inches by ~~ADD WIDTH~~ inches by ~~ADD HEIGHT~~ inches, resulting in  occupying ~~ADD PERCENTAGE~~% of the container.",
                         "Per FXF ITEM 750-8, This freight is being delivered to a limited access location listed in ITEM 750-8. The Limited Access Location charge applies.",
-                        "Mixed rates apply as stated in FXF Rules Tariff Item 640- UNLESS OTHERWISE PROVIDED, SHIPMENTS THAT CONSIST OF DIFFERENTLY CLASSED ARTICLES CONTAINED IN OR ON ONE HANDLING UNIT THAT HAVE BEEN INSPECTED AND THE INSPECTION DETERMINES THE SHIPPER’S INFORMATION WAS INACCURATE, THE HANDLING UNIT WILL BE RATED AT THE CLASS SHOWN IN PARAGRAPH 2 BASED ON THE DENSITY OF THE UNIT USING THE WEIGHT AND MEASUREMENTS.",
+                        "Shipment was not itemized and was billed as ~~ENTER IN BILLED DESCRIPTION~~ with NMFC ~~ENTER NMFC~~ class ~~ENTER CLASS~~ at ~~ENTER IN WEIGHT~~ lbs. Mixed rates apply as stated in FXF ITEM 640- UNLESS OTHERWISE PROVIDED, SHIPMENTS THAT CONSIST OF DIFFERENTLY CLASSED ARTICLES CONTAINED IN OR ON ONE HANDLING UNIT THAT HAVE BEEN INSPECTED AND THE INSPECTION DETERMINES THE SHIPPER’S INFORMATION WAS INACCURATE, THE HANDLING UNIT WILL BE RATED AT THE CLASS SHOWN IN PARAGRAPH 2 BASED ON THE DENSITY OF THE UNIT USING THE WEIGHT AND MEASUREMENTS.",
                         "No NMFC on OBOL - *NOBI*",
                         "Incorrect NMFC in OBOL - *ICBI*",
                         "Cannot Dimension shipment - *CDMI*"];
@@ -362,11 +362,11 @@ $(document).ready(function () {
         "This freight cannot be double stacked on itself but can be loaded on deck boards and load racks.",
         "This freight cannot be double stacked on itself nor can it be loaded on load racks.",
         "This freight cannot be double stacked on itself and it exceeds over half the height of the trailer.",
-        "freight is equal or over 8 feet but less than 12 feet, over length charge applies.",
-        "freight is equal or over 12 feet, extreme length charge applies.",
+        "freight is equal or over 8 feet but less than 12 feet at ~~ENTER LENGTH~~, over length charge applies.",
+        "freight is equal or over 12 feet at ~~ENTER LENGTH~~, extreme length charge applies.",
         "Freight is over 750 CUFT at ~~ADD CUFT~~ and under 4 PCF at ~~ADD PCF~~, Cubic Capacity and Load charge applies.",
         "Freight is over 180 inches at ~~ADD TOTAL LENGTH IN INCHES~~ inches, Capacity Load charge applies.",
-        "Freight is over 15,000 lbs at ~~ADD TOTAL WEIGHT~~, Capacity Load charge applies.",
+        "Freight is over 15,000 lbs. at ~~ADD TOTAL WEIGHT~~, Capacity Load charge applies.",
         "One more of the largest pallet can fit in the trailer.",
         "One more of the largest pallet cannot fit in the trailer."
         ];
