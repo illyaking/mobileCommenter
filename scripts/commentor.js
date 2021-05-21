@@ -127,7 +127,7 @@ $(document).ready(function () {
         $('#description').val(($('#description').val() + special[0] + states[6]));
     });
     
-    var packaging = [ "bundle,", "bundles,", "loose", "Bulk Commodity Totes,", "pails,", "boxed,", "boxes,", "bags,", "drums,", "rolls,", "crated", "crates", "frame,", "frames,", "pallet", "pallets", "skid", "skids", "totes,", "bottles,", "metal", "plastic", "shipping", "steel", "wooden", "machined pressed", "tank", "tanks", "tube,", "tubes,"];
+    var packaging = [ "bundle,", "bundles,", "loose", "Bulk Commodity Totes.", "pails,", "boxed,", "boxes,", "bags,", "drums,", "rolls,", "crated", "crates", "frame,", "frames,", "pallet", "pallets", "skid", "skids", "totes,", "bottles,", "metal", "plastic", "shipping", "steel", "wooden", "machined pressed", "tank", "tanks", "tube,", "tubes,"];
                      
     $("#bundleSingle").on("click", function () {
         $('#description').val(($('#description').val() + special[0] + packaging[0]));
@@ -249,9 +249,9 @@ $(document).ready(function () {
         $('#description').val(($('#description').val() + special[0] + packaging[29]));
     });
     
-    var reasons = [ "This freight was originally billed with NMFC ~~ADD NMFC~~ at class ~~ADD CLASS~~. It was described as ~~ADD DESCRIPTION~~ with a density measuring over ~~ADD PCF~~ PCF but less than ~~ADD PCF~~ PCF. The class was changed due to the actual density of the freight being ~~ADD PCF~~ PCF.",
-                    "This freight was originally billed with NMFC ~~ADD NMFC~~ at class ~~ADD CLASS~~. It was described as ~~ADD DESCRIPTION~~ with a density measuring over ~~ADD PCF~~ PCF but less than ~~ADD PCF~~ PCF.  Visual inspection revealed the description to be incorrect. The NMFC was assigned due to a visual inspection and the class was changed due to the actual density of the freight being ~~ADD PCF~~ PCF.",
-                    "This freight was originally billed with NMFC ~~ADD NMFC~~ at class ~~ADD CLASS~~. It was described as ~~ADD DESCRIPTION~~ with a density measuring over ~~ADD PCF~~ PCF but less than ~~ADD PCF~~ PCF.  The description on the packing list revealed the billed description to be incorrect. The NMFC was assigned due to the description on the packing list. The class was changed due to the actual density of the freight being ~~ADD PCF~~ PCF. An indirect photo was taken to protect the integrity of the packaging.",
+    var reasons = [ "This freight was originally billed with NMFC ~~ADD NMFC~~ at class ~~ADD CLASS~~, which was intended for ~~ADD DESCRIPTION~~ with a density measuring over ~~ADD PCF~~ PCF but less than ~~ADD PCF~~ PCF. The class was changed due to the actual density of the freight being ~~ADD PCF~~ PCF.",
+                    "This freight was originally billed with NMFC ~~ADD NMFC~~ at class ~~ADD CLASS~~, which was intended for ~~ADD DESCRIPTION~~ with a density measuring over ~~ADD PCF~~ PCF but less than ~~ADD PCF~~ PCF. Visual inspection revealed the description to be incorrect. The NMFC was assigned due to a visual inspection and the class was changed due to the actual density of the freight being ~~ADD PCF~~ PCF.",
+                    "This freight was originally billed with NMFC ~~ADD NMFC~~ at class ~~ADD CLASS~~, which was intended for ~~ADD DESCRIPTION~~ with a density measuring over ~~ADD PCF~~ PCF but less than ~~ADD PCF~~ PCF. The description on the packing list revealed the billed description to be incorrect. The NMFC was assigned due to the description on the packing list. The class was changed due to the actual density of the freight being ~~ADD PCF~~ PCF. An indirect photo was taken to protect the integrity of the packaging.",
                     "Originally billed using class ~~ADD CLASS~~ but with no NMFC. The NMFC was assigned due to a visual inspection and the class was assigned due to the actual density of ~~ADD PCF~~ PCF.",
                     "Freight was not rated nor classed on the BOL. The NMFC was assigned due to a visual inspection of the freight. The class was assigned due to the actual density of ~~ADD PCF~~ PCF.",
                     "No NMFC or class was used to bill this shipment. The NMFC was assigned due to the description on the packing list. The class was assigned due to the actual density of ~~ADD PCF~~ PCF. An indirect photo was taken to protect the integrity of the packaging.",
@@ -357,66 +357,67 @@ $(document).ready(function () {
     });
     
     var stacking = [
-        "This freight can be double stacked on itself and loaded on deck boards and load racks.",
-        "This freight can be double stacked on itself but cannot be loaded on deck boards and load racks.",
-        "This freight cannot be double stacked on itself but can be loaded on deck boards and load racks.",
-        "This freight cannot be double stacked on itself nor can it be loaded on load racks.",
+        "**Per ITEM 390 line 4, Combine with PRO ~~Enter PRO number here~~ with ~~Enter Handling Units here~~ HU at ~~Enter weight here~~ lbs.**",
+        "PRO ~~Enter PRO number here~~ with ~~Enter Handling Units here~~ HU at ~~Enter weight here~~~ lbs.,",
+        "and PRO ~~Enter PRO number here~~ with ~~Enter Handling Units here~~ HU at ~~Enter weight here~~~ lbs.**",
+        "**Overflow at ~~Quantity of Overflow~~ pallets with a total weight of ~~Enter Overflow Weight Here~~ lbs.**",
+        "**Shipment also qualifies for the Cubic Capacity and Density tariff rule.**",
         "This freight cannot be double stacked on itself and it exceeds over half the height of the trailer.",
         "freight is equal or over 8 feet but less than 12 feet at ~~ENTER LENGTH~~, over length charge applies.",
         "freight is equal or over 12 feet at ~~ENTER LENGTH~~, extreme length charge applies.",
-        "Freight is over 750 CUFT at ~~ADD CUFT~~ and under 4 PCF at ~~ADD PCF~~, Cubic Capacity and Load charge applies.",
-        "Freight is over 180 inches at ~~ADD TOTAL LENGTH IN INCHES~~ inches, Capacity Load charge applies.",
-        "Freight is over 15,000 lbs. at ~~ADD TOTAL WEIGHT~~, Capacity Load charge applies.",
-        "One more of the largest pallet can fit in the trailer.",
-        "One more of the largest pallet cannot fit in the trailer."
+        "**Freight is over 750 CUFT at ~~ADD CUFT~~ CUFT and under 4 PCF at ~~ADD PCF~~ PCF, Cubic Capacity and Load charge applies.",
+        "**Shipment overall dimensions is at ~~Enter Overall Dims Here~~. Shipment utilizes ~~Enter Lineal Feet Here~~ linear feet in length.",
+        "**Shipment exceeds 15,000 lbs., actual weight at ~~Enter Weight Here~~ lbs.",
+        "One more of the largest handling unit will fit in a pup trailer.**",
+        "One more of the largest handling unit will not fit in a pup trailer.**"
         ];
-    
-    $("#canStackCanLoad").on("click", function () {
-        $('#description').val(($('#description').val() + special[0] + stacking[0]));
+        
+    $("#multiplePro").on("click", function () {
+        $('#description').val(($('#description').val() + stacking[0]));
     });
     
-    $("#canStackNoLoad").on("click", function () {
+    $("#additionalPro").on("click", function () {
         $('#description').val(($('#description').val() + special[0] + stacking[1]));
     });
     
-    $("#cannotStackButCanLoad").on("click", function () {
+    $("#lastPro").on("click", function () {
         $('#description').val(($('#description').val() + special[0] + stacking[2]));
     });
-
-    $("#cannotStackNorLoad").on("click", function () {
-        $('#description').val(($('#description').val() + special[0] + stacking[3]));
+    
+    $("#overflow").on("click", function () {
+        $('#description').val(($('#description').val() + stacking[3]));
     });
     
-    $("#tooTall").on("click", function () {
-        $('#description').val(($('#description').val() + special[0] + stacking[4]));
+    $("#ccdComment").on("click", function () {
+        $('#description').val(($('#description').val() + stacking[4]));
     });
     
     $("#overLength").on("click", function () {
-        $('#description').val(($('#description').val() + special[0] + stacking[5]));
-    });
-    
-    $("#extremeLength").on("click", function () {
         $('#description').val(($('#description').val() + special[0] + stacking[6]));
     });
     
-    $("#cubicCapacityAndDensity").on("click", function () {
+    $("#extremeLength").on("click", function () {
         $('#description').val(($('#description').val() + special[0] + stacking[7]));
     });
     
-    $("#capacityLoad").on("click", function () {
+    $("#cubicCapacityAndDensity").on("click", function () {
         $('#description').val(($('#description').val() + special[0] + stacking[8]));
     });
     
+    $("#capacityLoad").on("click", function () {
+        $('#description').val(($('#description').val() + stacking[9]));
+    });
+    
     $("#capacityLoad20k").on("click", function () {
-        $('#description').val(($('#description').val() + special[0] + stacking[9]));
+        $('#description').val(($('#description').val() + stacking[10]));
     });
     
     $("#oneMore").on("click", function () {
-        $('#description').val(($('#description').val() + special[0] + stacking[10]));
+        $('#description').val(($('#description').val() + special[0] + stacking[11]));
     });
     
     $("#noMore").on("click", function () {
-        $('#description').val(($('#description').val() + special[0] + stacking[11]));
+        $('#description').val(($('#description').val() + special[0] + stacking[12]));
     });
     
     $("#clear").on("click", function () {
